@@ -5,14 +5,13 @@ import {RouterModule} from '@angular/router';
 
 import {HeroService} from './service/hero/hero.service';
 import {ActivityService} from './service/activity/activity.service';
+import {PlayerService} from './service/player/player.service';
 
 import {AppComponent} from './app.component';
 import {HeroDetailComponent} from './components/page/hero-detail/hero-detail.component';
 import {HomeComponent} from './components/page/home/home.component';
 import {ActivityComponent} from './components/components/activity/activity.component';
-import {OwlCarouselComponent} from './components/components/owlCarousel/owlCarousel';
-
-import {OwlDirective} from './directives/owl.directive';
+import {LevelingComponent} from './components/page/leveling/leveling.component';
 
 @NgModule({
   declarations: [
@@ -20,8 +19,7 @@ import {OwlDirective} from './directives/owl.directive';
     HeroDetailComponent,
     HomeComponent,
     ActivityComponent,
-    OwlCarouselComponent,
-    OwlDirective
+    LevelingComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +31,7 @@ import {OwlDirective} from './directives/owl.directive';
       }
     ])
   ],
-  providers: [HeroService, ActivityService],
+  providers: [HeroService, ActivityService, PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
