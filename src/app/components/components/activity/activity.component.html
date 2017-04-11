@@ -1,0 +1,12 @@
+<!--<div class="owl-carousel owl-theme">
+  <div class="carousel-item item" *ngFor="let activity of activities;let isLast = last">
+    <span>{{activity.id}},{{activity.name}},{{activity.url}} - {{isLast}}</span>
+    <span *ngIf="getLast(isLast)"></span>
+  </div>
+</div>-->
+<app-owl-carousel [options]="{navigation: false, pagination: true, rewindNav : false}">
+  <div *ngFor="let activity of activities;let isLast = last">
+    <span>{{activity.id}},{{activity.name}},{{activity.url}} - {{isLast}}</span>
+    <span></span>
+  </div>
+</app-owl-carousel>
