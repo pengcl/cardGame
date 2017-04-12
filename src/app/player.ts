@@ -1,6 +1,5 @@
 export class Player {
   id: number;
-  levelId: number;
   name: string;
   nationality: string;
   weight: number;
